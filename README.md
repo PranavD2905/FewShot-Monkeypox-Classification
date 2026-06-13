@@ -128,4 +128,3 @@ fewshot_monkeypox/
 Pranav D
 *   **GitHub:** [your-github-profile](https://github.com/PranavD2905)
 *   **LinkedIn:** [your-linkedin-profile](https://www.linkedin.com/in/pranav2905/)
-
