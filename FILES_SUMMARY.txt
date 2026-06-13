@@ -1,0 +1,121 @@
+═══════════════════════════════════════════════════════════════════════════
+                    GENERATED FILES SUMMARY
+═══════════════════════════════════════════════════════════════════════════
+
+📊 VISUALIZATIONS (PNG Images)
+───────────────────────────────────────────────────────────────────────────
+
+1. training_curves_prototypical.png (488 KB)
+   • 2x2 grid showing training and validation loss curves
+   • All 4 backbones: ResNet50, EfficientNet-B0, DenseNet121, MobileNetV3
+   • 1000 episodes with validation every 100 episodes
+   • Shows convergence behavior and early stopping points
+
+2. confusion_matrices_prototypical.png (222 KB)
+   • 2x2 grid of confusion matrices from 500-episode evaluation
+   • Shows true positives, false positives, true negatives, false negatives
+   • Per-class breakdown for "normal" vs "infected" classifications
+
+3. model_comparison.png (644 KB)
+   • 6-panel comprehensive comparison:
+     ◦ Panel 1: Accuracy bar chart (Prototypical vs Classifier)
+     ◦ Panel 2: F1-Score bar chart
+     ◦ Panel 3: AUC bar chart
+     ◦ Panel 4: Precision-Recall scatter plot
+     ◦ Panel 5: Performance improvement horizontal bar chart
+     ◦ Panel 6: Prototypical metrics heatmap
+
+
+📋 DATA FILES (CSV)
+───────────────────────────────────────────────────────────────────────────
+
+4. detailed_metrics.csv (529 bytes)
+   • 8 rows (4 prototypical + 4 classifier models)
+   • Columns: model_type, backbone, accuracy, precision, recall, f1, auc
+   • Full precision (4 decimal places) for all metrics
+
+5. final_results.csv (700 bytes)  
+   • Summary table with episode counts and notes
+   • Includes training configuration details
+   • Notes on early stopping, perfect AUC, etc.
+
+
+📁 INDIVIDUAL CONFUSION MATRICES
+───────────────────────────────────────────────────────────────────────────
+
+6. outs/proto_resnet50/confusion.png
+7. outs/proto_efficientnet_b0/confusion.png
+8. outs/proto_densenet121/confusion.png
+9. outs/proto_mobilenet_v3/confusion.png
+
+
+📖 DOCUMENTATION
+───────────────────────────────────────────────────────────────────────────
+
+10. ANALYSIS_REPORT.md (5.1 KB)
+    • Comprehensive 8-section analysis report
+    • Training curves analysis
+    • Performance comparison tables
+    • Key findings and insights
+    • Clinical deployment recommendations
+    • Training configuration details
+    • Complete experimental methodology
+
+
+═══════════════════════════════════════════════════════════════════════════
+                         METRICS SUMMARY
+═══════════════════════════════════════════════════════════════════════════
+
+PROTOTYPICAL NETWORKS (Best to Worst):
+1. EfficientNet-B0:  96.53% accuracy, 96.42% F1, 100.00% AUC  ⭐ BEST
+2. MobileNetV3:      93.30% accuracy, 93.18% F1, 100.00% AUC  ⚡ FASTEST
+3. DenseNet121:      92.05% accuracy, 91.79% F1,  97.60% AUC
+4. ResNet50:         90.98% accuracy, 90.73% F1,  97.39% AUC
+
+STANDARD CLASSIFIERS (Best to Worst):
+1. DenseNet121:      91.67% accuracy, 90.91% F1, 100.00% AUC
+2. MobileNetV3:      91.67% accuracy, 90.91% F1, 100.00% AUC
+3. ResNet50:         83.33% accuracy, 80.00% F1, 100.00% AUC
+4. EfficientNet-B0:  83.33% accuracy, 80.00% F1,  97.22% AUC
+
+AVERAGE IMPROVEMENT: +5.8% accuracy (Prototypical vs Classifier)
+
+
+═══════════════════════════════════════════════════════════════════════════
+                      EVALUATION METHODOLOGY
+═══════════════════════════════════════════════════════════════════════════
+
+• Prototypical Networks: 500 held-out episodes per model
+• Standard Classifiers: Test set (20% split of each class)
+• Few-shot setting: 2-way, 5-shot, 10-query per episode
+• Dataset: 30 normal + 30 infected monkeypox images (224x224)
+• Split: 80% training, 20% validation/testing per class
+
+• Metrics calculated:
+  - Accuracy: Overall classification correctness
+  - Precision: True positives / (True positives + False positives)
+  - Recall: True positives / (True positives + False negatives)
+  - F1-Score: Harmonic mean of precision and recall
+  - AUC: Area Under ROC Curve (discrimination ability)
+
+
+═══════════════════════════════════════════════════════════════════════════
+                        USAGE INSTRUCTIONS
+═══════════════════════════════════════════════════════════════════════════
+
+To view results:
+  • Open PNG files in any image viewer
+  • Open CSV files in Excel, Python pandas, or text editor
+  • Read ANALYSIS_REPORT.md for detailed interpretation
+
+To reproduce analysis:
+  python3 analyze_results.py          # Main analysis script
+  python3 create_confusion_grid.py    # Confusion matrix grid
+  python3 create_comparison_plots.py  # Comparison visualizations
+
+All scripts are self-contained and use data from:
+  • Training logs: train_*_1000ep.log
+  • Model checkpoints: k/*/best.pth
+  • Previously computed classifier metrics
+
+═══════════════════════════════════════════════════════════════════════════

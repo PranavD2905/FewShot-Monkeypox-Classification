@@ -1,0 +1,12 @@
+2025-11-04 15:16:21,373 - INFO - Episode 100/1000 loss=0.1926 val_loss=0.3153
+2025-11-04 15:17:37,410 - INFO - Episode 200/1000 loss=0.1271 val_loss=0.2981
+2025-11-04 15:19:08,775 - INFO - Episode 300/1000 loss=0.1011 val_loss=0.2911
+2025-11-04 15:20:38,378 - INFO - Episode 400/1000 loss=0.0920 val_loss=0.3051
+2025-11-04 15:22:05,546 - INFO - Episode 500/1000 loss=0.0870 val_loss=0.2905
+2025-11-04 15:23:32,030 - INFO - Episode 600/1000 loss=0.0770 val_loss=0.2939
+2025-11-04 15:24:59,161 - INFO - Episode 700/1000 loss=0.0853 val_loss=0.3133
+2025-11-04 15:26:27,117 - INFO - Episode 800/1000 loss=0.0754 val_loss=0.3323
+2025-11-04 15:27:54,961 - INFO - Episode 900/1000 loss=0.0764 val_loss=0.3377
+2025-11-04 15:29:23,296 - INFO - Episode 1000/1000 loss=0.0717 val_loss=0.3293
+2025-11-04 15:29:23,487 - INFO - Early stopping at episode 1000 (no improvement for 5 validations)
+2025-11-04 15:29:23,681 - INFO - Training finished

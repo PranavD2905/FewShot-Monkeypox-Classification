@@ -1,0 +1,27 @@
+# Full 1000-episode DenseNet121 with overfitting mitigations
+N_way: 2
+K_shot: 5
+Q_query: 10
+embedding_dim: 256
+num_episodes: 1000
+lr: 5e-5
+weight_decay: 1e-4
+batch_size: 16
+optimizer: Adam
+backbone: densenet121
+fine_tune_layers: 0
+projection_dropout: 0.3
+distance: cosine
+temperature: 0.7
+patience_val: 5
+device: mps
+data_root: data
+img_size: 224
+val_ratio: 0.2
+val_every: 100
+val_episodes: 200
+checkpoint_dir: checkpoints/densenet121_1000ep
+log_file: train_densenet121_1000ep.log
+test_episodes: 500
+output_dir: outs
+seed: 42

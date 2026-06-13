@@ -1,0 +1,5 @@
+2025-11-04 14:52:41,609 - INFO - Episode 50/200 loss=0.4665 val_loss=0.3564
+2025-11-04 14:53:38,688 - INFO - Episode 100/200 loss=0.3291 val_loss=0.3063
+2025-11-04 14:54:35,865 - INFO - Episode 150/200 loss=0.2808 val_loss=0.2907
+2025-11-04 14:55:33,118 - INFO - Episode 200/200 loss=0.2004 val_loss=0.2842
+2025-11-04 14:55:33,638 - INFO - Training finished

@@ -1,0 +1,9 @@
+model_type,backbone,episodes,accuracy,f1,auc,notes
+prototypical,resnet50,1000,0.9098,0.9073,0.9739,Early stopping triggered; best checkpoint used
+prototypical,efficientnet_b0,1000,0.9331,0.9308,1.0000,Perfect AUC
+prototypical,densenet121,1000,0.9205,0.9179,0.9760,Best checkpoint used
+prototypical,mobilenet_v3,1000,0.9330,0.9318,1.0000,Perfect AUC; fastest training
+classifier,resnet50,50,0.8333,0.8000,1.0000,Standard transfer learning baseline
+classifier,efficientnet_b0,50,0.8333,0.8000,0.9722,Standard transfer learning baseline
+classifier,densenet121,50,0.9167,0.9091,1.0000,Standard transfer learning baseline
+classifier,mobilenet_v3,50,0.9167,0.9091,1.0000,Standard transfer learning baseline

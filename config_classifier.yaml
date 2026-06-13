@@ -1,0 +1,10 @@
+backbone: resnet50
+lr: 1e-4
+batch_size: 16
+epochs: 50  # roughly equivalent training time to proto episodes
+device: mps
+data_root: data
+img_size: 224
+checkpoint_dir: checkpoints
+log_file: train_classifier.log
+output_dir: outs

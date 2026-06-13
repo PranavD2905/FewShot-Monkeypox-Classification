@@ -1,0 +1,9 @@
+model_type,backbone,accuracy,precision,recall,f1,auc
+classifier,densenet121,0.9167,1.0000,0.8333,0.9091,1.0000
+classifier,mobilenet_v3,0.9167,1.0000,0.8333,0.9091,1.0000
+classifier,resnet50,0.8333,1.0000,0.6667,0.8000,1.0000
+classifier,efficientnet_b0,0.8333,1.0000,0.6667,0.8000,0.9722
+prototypical,efficientnet_b0,0.9653,0.9751,0.9612,0.9642,1.0000
+prototypical,mobilenet_v3,0.9330,0.9487,0.9304,0.9318,1.0000
+prototypical,densenet121,0.9205,0.9423,0.9118,0.9179,0.9760
+prototypical,resnet50,0.9098,0.9300,0.9026,0.9073,0.9739
