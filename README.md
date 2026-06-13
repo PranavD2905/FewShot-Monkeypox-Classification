@@ -125,6 +125,6 @@ fewshot_monkeypox/
 
 ## 📞 Contact
 
-Pranav D
-*   **GitHub:** [your-github-profile](https://github.com/PranavD2905)
-*   **LinkedIn:** [your-linkedin-profile](https://www.linkedin.com/in/pranav2905/)
+Pranav Deshpande
+*   **GitHub:** [PranavD2905](https://github.com/PranavD2905)
+*   **LinkedIn:** [pranav2905](https://www.linkedin.com/in/pranav2905/)
